@@ -50,6 +50,11 @@ void SIM800::readLine()
 
     symbol = serial->read();
 
+    if (symbol == '\n') {
+        buff[0] = '\0';
+        return;
+    }
+
     while (symbol != '\n') {
     
         if (symbol != -1) {
@@ -59,7 +64,10 @@ void SIM800::readLine()
             --i;
         }
       
-        if (i == 0 || (i > sizeof(buff) - 1)) { break; }
+        if (i < 1 || (i == sizeof(buff) - 1)) {
+            strcpy(buff, "ERR");
+            return;
+        }
     
         delay(2);
     
@@ -72,9 +80,9 @@ char * SIM800::waitResponse()
 {
     char i = 0;
     
-    while (!serial->available() && i < 250) {
+    while (!serial->available() && i < 125) {
        ++i;
-       delay(20);
+       delay(40);
 
     }
     
