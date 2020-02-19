@@ -1,11 +1,3 @@
-## Arduino SIM800 unsolicited notifications handler
-
-Arduino library for SIM800L GSM module with event handling (unsolicited notifications) via callbacks.
-
-### Example (check examples folder):
-
-
-```cpp
 #include "SIM800.h"
 
 SIM800<HardwareSerial> SIM(&Serial);
@@ -70,11 +62,3 @@ void loop() {
     //be careful, SIM800 library will read serial buffer
     //make sure you got all data that you might expect from SIM800, *before* handle() call.
 }
-
-```
-
-### License:
-MIT
-### Author:
-Paul aka root4root \<root4root at gmail dot com><br/>
-**Any comments/suggestions are welcomed.**

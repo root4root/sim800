@@ -1,0 +1,25 @@
+#######################################
+# Syntax Coloring Map For SIM800
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+SIM800	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+setIncomingCallHandler	KEYWORD2
+setIncomingSMSHandler	KEYWORD2
+setIncomingDTMFHandler	KEYWORD2
+handle	KEYWORD2
+waitResponse	KEYWORD2
+sendSMS	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
